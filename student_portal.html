@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="student_portal.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="contactNo">Contact Number:</label>
+        <input type="text" id="contactNo" name="contactNo" required><br><br>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <div id="overlay"></div>
+    <div id="receipt">
+        <h2>Receipt</h2>
+        <p id="receiptContent"></p>
+        <button onclick="closeReceipt()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function closeReceipt() {
+            document.getElementById('receipt').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
